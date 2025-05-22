@@ -8,6 +8,7 @@
 
 import type Property from '../../../axon/js/Property.js';
 import Matrix3 from '../../../dot/js/Matrix3.js';
+import Vector2 from '../../../dot/js/Vector2.js';
 import Utils from '../../../dot/js/Utils.js';
 import Shape from '../../../kite/js/Shape.js';
 import LineStyles from '../../../kite/js/util/LineStyles.js';
@@ -165,15 +166,15 @@ export default class InductorNode extends FixedCircuitElementNode {
 
     this.inductor = inductor;
 
-    if (!providedOptions.isIcon) {
-      const magnetFieldLines = new MagnetFieldLines(inductor, {
-        tandem: tandem.createTandem('magnetFieldLines'),
+    if ( !providedOptions.isIcon ) {
+      const magnetFieldLines = new MagnetFieldLines( inductor, {
+        tandem: tandem.createTandem( 'magnetFieldLines' ),
         color: '#ffffff'
-      });
-      
-      lifelikeNode.addChild(magnetFieldLines);
+      } );
+      lifelikeNode.addChild( magnetFieldLines );
+      magnetFieldLines.setFieldLineOffset( new Vector2( LIFELIKE_WIDTH / 2, LIFELIKE_HEIGHT / 2 ) );
     }
   }
 }
 
-circuitConstructionKitCommon.register('InductorNode', InductorNode);
+circuitConstructionKitCommon.register( 'InductorNode', InductorNode );
