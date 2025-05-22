@@ -368,7 +368,7 @@ export default class CircuitElementToolFactory {
       new Vertex( new Vector2( CCKCConstants.INDUCTOR_LENGTH, 0 ), this.circuit.selectionProperty ),
       Tandem.OPT_OUT
     );
-    const count = CCKCQueryParameters.moreInductors ? 10 : 1;
+    const count = CCKCQueryParameters.moreInductors ? 10 : 10;
     return this.createCircuitElementToolNode( inductorStringProperty, count,
       ( tandem, viewTypeProperty ) => new InductorNode( null, null, inductorModel, viewTypeProperty, tandem.createTandem( 'inductorIcon' ), {
         isIcon: true,
