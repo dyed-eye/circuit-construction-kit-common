@@ -165,15 +165,15 @@ export default class InductorNode extends FixedCircuitElementNode {
 
     this.inductor = inductor;
 
-    if ( !providedOptions.isIcon ) {
-      const magnetFieldLines = new MagnetFieldLines( inductor, {
-        tandem: tandem.createTandem( 'magnetFieldLines' ),
-        centerX: LIFELIKE_WIDTH / 2,
-        centerY: LIFELIKE_HEIGHT / 2
-      } );
-     this.addChild( magnetFieldLines );
+    if (!providedOptions.isIcon) {
+      const magnetFieldLines = new MagnetFieldLines(inductor, {
+        tandem: tandem.createTandem('magnetFieldLines'),
+        color: '#ffffff'
+      });
+      
+      lifelikeNode.addChild(magnetFieldLines);
     }
   }
 }
 
-circuitConstructionKitCommon.register( 'InductorNode', InductorNode );
+circuitConstructionKitCommon.register('InductorNode', InductorNode);
