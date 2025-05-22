@@ -24,6 +24,7 @@ import type Inductor from '../model/Inductor.js';
 import type CCKCScreenView from './CCKCScreenView.js';
 import type CircuitNode from './CircuitNode.js';
 import FixedCircuitElementNode, { type FixedCircuitElementNodeOptions } from './FixedCircuitElementNode.js';
+import MagnetFieldLines from './MagnetFieldLines.js';
 
 // constants
 // dimensions for schematic
@@ -163,6 +164,15 @@ export default class InductorNode extends FixedCircuitElementNode {
     );
 
     this.inductor = inductor;
+
+    if ( !providedOptions.isIcon ) {
+      const magnetFieldLines = new MagnetFieldLines( inductor, {
+        tandem: tandem.createTandem( 'magnetFieldLines' ),
+        centerX: LIFELIKE_WIDTH / 2,
+        centerY: LIFELIKE_HEIGHT / 2
+      } );
+     this.addChild( magnetFieldLines );
+    }
   }
 }
 
