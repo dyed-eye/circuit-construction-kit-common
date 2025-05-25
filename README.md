@@ -1,4 +1,4 @@
-This is a fork of an auxiliary library for AC Circuit Construction by PhET Interactive Simulations.
+## This is a fork of an auxiliary library for AC Circuit Construction by PhET Interactive Simulations.
 
 It was created to slightly enhance the visual appearance of certain circuit elements, such as inductors.
 
@@ -6,7 +6,7 @@ Compared with the original, this repository supports a greater number of inducto
 
 Moreover, it displays the magnetic fields of the inductors, thereby enhancing the visualization of physical processes.
 
-================
+---
 
 Circuit Construction Kit Common
 ================
